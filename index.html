@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Calculator Remake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="input"></div>
+            <div class="result"></div>
+        </div>
+        <div class="buttons">
+            <button class="btn accent-red">C</button>
+            <button class="btn">()</button>
+            <button class="btn">%</button>
+            <button class="btn operator">÷</button>
+
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn operator">×</button>
+
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn operator">−</button>
+
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn operator">+</button>
+
+            <button class="btn">±</button>
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button class="btn accent-green">=</button>
+        </div>
+    </div>
+
+    <script>
+        const displayInput = document.querySelector('.display .input');
+        const displayResult = document.querySelector('.display .result');
+        const buttons = document.querySelectorAll('.btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const buttonText = button.textContent;
+
+                if (buttonText === '=') {
+                    if (displayInput.textContent === '2011') {
+                        // Please replace the URL with a safe, non-explicit website for your prank.
+                        window.open('https://www.pornhub.org/recommended', '_blank');
+                    } else {
+                        displayResult.textContent = displayInput.textContent;
+                        displayInput.textContent = '';
+                    }
+                } else if (buttonText === 'C') {
+                    displayInput.textContent = '';
+                    displayResult.textContent = '';
+                } else {
+                    displayInput.textContent += buttonText;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
